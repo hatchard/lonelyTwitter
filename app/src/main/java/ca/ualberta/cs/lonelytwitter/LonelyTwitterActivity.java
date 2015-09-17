@@ -27,6 +27,16 @@ public class LonelyTwitterActivity extends Activity {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+        //makes a tweet list that can contain both normal tweets and important tweets
+        ArrayList<Tweet> tweetList= new ArrayList<Tweet>();
+		Tweet t = new ImportantTweet("");
+
+        try {
+            t.setText("");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
