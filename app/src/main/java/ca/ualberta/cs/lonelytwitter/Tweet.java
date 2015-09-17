@@ -1,6 +1,7 @@
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -10,6 +11,7 @@ public abstract class Tweet implements Tweetable {
     //declare attribute
     private String text;
     protected Date date;
+    private ArrayList<CurrentMood> mood;
 
     //constructor
 
